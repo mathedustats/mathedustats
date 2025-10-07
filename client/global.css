@@ -1,0 +1,110 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Brand palette (light) */
+    --background: 35 43% 95%; /* #F7F2EB */
+    --foreground: 224 84% 20%; /* #081F5C */
+
+    --card: 35 43% 95%;
+    --card-foreground: 224 84% 20%;
+
+    --popover: 35 43% 95%;
+    --popover-foreground: 224 84% 20%;
+
+    --primary: 227 54% 44%; /* #334EAC */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 216 100% 91%; /* #D0E3FF */
+    --secondary-foreground: 224 84% 20%;
+
+    --muted: 206 55% 83%; /* #BAD6EB */
+    --muted-foreground: 224 30% 30%;
+
+    --accent: 217 51% 63%; /* #7096D1 */
+    --accent-foreground: 224 84% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 45% 80%;
+    --input: 216 45% 80%;
+    --ring: 227 54% 44%;
+
+    --radius: 0.5rem;
+
+    /* Additional tokens for convenience */
+    --highlight-section: 216 100% 91%; /* light blue section bg */
+    --cta: 224 84% 20%; /* deep blue text emphasis */
+
+    /* Sidebar (unused but harmonized) */
+    --sidebar-background: 216 100% 95%;
+    --sidebar-foreground: 224 84% 20%;
+    --sidebar-primary: 227 54% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 51% 63%;
+    --sidebar-accent-foreground: 224 84% 20%;
+    --sidebar-border: 216 45% 80%;
+    --sidebar-ring: 227 54% 44%;
+  }
+
+  .dark {
+    /* Reasonable dark variant */
+    --background: 224 60% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 60% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 60% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 227 54% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 30% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 30% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 227 54% 38%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 224 30% 22%;
+    --input: 224 30% 22%;
+    --ring: 227 54% 44%;
+
+    --sidebar-background: 224 30% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 227 54% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 227 54% 38%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 224 30% 18%;
+    --sidebar-ring: 227 54% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
